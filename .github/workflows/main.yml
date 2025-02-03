@@ -102,4 +102,12 @@ jobs:
             git push --force
           fi
       - name: Run create_json.py
-        run: python create_json.py
+        run: |
+          python create_json.py
+          if [[ -f "user_result.json" ]]; then
+            git add -f "user_result.json"
+          fi
+          if ! git diff --staged --quiet; then
+            git commit -m "Github Action Auto Updated - user_result.json"
+            git push --force
+          fi
