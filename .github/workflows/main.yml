@@ -101,13 +101,14 @@ jobs:
             git commit -m "Github Action Auto Updated"
             git push --force
           fi
-      - name: Run create_json.py
+      - name: Debug create_json.py
         run: |
+          ls -al
           python create_json.py
+          ls -al
           if [[ -f "user_result.json" ]]; then
-            git add -f "user_result.json"
-          fi
-          if ! git diff --staged --quiet; then
-            git commit -m "Github Action Auto Updated - user_result.json"
-            git push --force
-          fi
+            git add user_result.json
+            git commit -m "Update user_result.json"
+            git push
+          else
+            echo "user_result.json not found. Check create_json.py script."
