@@ -101,5 +101,3 @@ jobs:
             git commit -m "Github Action Auto Updated"
             git push --force
           fi
-      - name: Run create_json.py
-        run: python create_json.py
