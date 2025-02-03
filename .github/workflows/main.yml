@@ -56,15 +56,3 @@ jobs:
         run: pipenv install selenium
       - name: Update
         run: pipenv run dev
-      - name: Debug create_json.py
-        run: |
-          ls -al ./output
-          cat ./output/user_result.txt
-          python create_json.py
-          ls -al ./output
-          if [[ -f "output/user_result.json" ]]; then
-            git add output/user_result.json
-            git commit -m "Update user_result.json"
-            git push
-          else
-            echo "user_result.json not found. Check create_json.py script."
