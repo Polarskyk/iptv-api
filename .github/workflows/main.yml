@@ -1,4 +1,4 @@
-name: 'Update schedule'
+3name: 'Update schedule'
 
 on:
   schedule:
@@ -56,3 +56,5 @@ jobs:
         run: pipenv install selenium
       - name: Update
         run: pipenv run dev
+      - name: json_c
+        run: pipenv run create_json.py
