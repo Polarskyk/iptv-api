@@ -58,6 +58,8 @@ jobs:
         run: pipenv install selenium
       - name: Update
         run: pipenv run dev
+      - name: json run
+        run: pipenv run create_json
       - name: Commit and push if changed
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
@@ -85,6 +87,9 @@ jobs:
           if [[ -f "$final_m3u_file" ]]; then
             git add -f "$final_m3u_file"
           fi
+          if [[ -f "output/user_result.json" ]];then
+            git add -f "output/user_result.json"
+          fi
           if [[ -f "output/cache.pkl" ]]; then
             git add -f "output/cache.pkl"
           fi
@@ -101,14 +106,3 @@ jobs:
             git commit -m "Github Action Auto Updated"
             git push --force
           fi
-      - name: Debug create_json.py
-        run: |
-          ls -al
-          python create_json.py
-          ls -al
-          if [[ -f "user_result.json" ]]; then
-            git add user_result.json
-            git commit -m "Update user_result.json"
-            git push
-          else
-            echo "user_result.json not found. Check create_json.py script."
