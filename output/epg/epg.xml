@@ -1,5 +1,5 @@
 <?xml version="1.0" ?>
-<tv date="20260108075743 +0800">
+<tv date="20260108090020 +0800">
 	<channel id="CCTV-1">
 		<display-name lang="zh">CCTV-1</display-name>
 	</channel>
@@ -21330,6 +21330,9 @@
 	<programme channel="黑莓动画" start="20260108132800 +0800" stop="20260108154500 +0800">
 		<title lang="zh">07_一人之下 第4季</title>
 	</programme>
+	<programme channel="黑莓动画" start="20260108154500 +0800" stop="20260108172000 +0800">
+		<title lang="zh">蜡笔小新：决一胜负！逆袭的机器人爸爸</title>
+	</programme>
 	<channel id="黑莓电影">
 		<display-name lang="zh">黑莓电影</display-name>
 	</channel>
@@ -21359,6 +21362,9 @@
 	</programme>
 	<programme channel="黑莓电影" start="20260108132700 +0800" stop="20260108150700 +0800">
 		<title lang="zh">侠客无名</title>
+	</programme>
+	<programme channel="黑莓电影" start="20260108150700 +0800" stop="20260108163900 +0800">
+		<title lang="zh">仙剑奇侠传前传：酒剑仙</title>
 	</programme>
 	<channel id="黑龙江卫视">
 		<display-name lang="zh">黑龙江卫视</display-name>
